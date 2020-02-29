@@ -1,0 +1,49 @@
+pickup_point=input("enter the pickup point:",).lower()
+drop_point=input("enter the drop point:",).lower()
+type=input("enter the vehicle type: ",).lower()
+
+
+pickup_list=["airport","pallavaram","chrompet","sanatorium","tambaram"]
+drop_list=["airport","pallavaram","chrompet","sanatorium","tambaram"]
+type_list=["bike","auto","mini","micro","prime"]
+if type in type_list:
+    if(type=="bike"):
+        c=10
+    if (type == "auto"):
+        c=30
+    if (type == "mini"):
+        c=40
+    if (type == "micro"):
+        c=50
+    if (type == "prime"):
+        c=60
+
+
+
+if pickup_point in pickup_list:
+ if drop_point in drop_list:
+    print("cab available")
+ else:
+    print("cab not available for the selected location")
+a=pickup_list.index(pickup_point)
+b=drop_list.index(drop_point)
+
+if(a==b):
+    print("approx fare: ",c+30)
+elif(b==a+1):
+    print("approx fare: ",c+40)
+elif(b==a+2):
+    print("approx fare: ",c+50)
+elif(b==a+3):
+    print("approx fare: ",c+60)
+elif(b==a+4):
+    print("approx fare: ",c+70)
+elif(b==a-1):
+    print("approx fare: ",c+40)
+elif(b==a-2):
+    print("approx fare: ",c+50)
+elif(b==a-3):
+    print("approx fare: ",c+60)
+elif(b==a-4):
+    print("approx fare: ",c+70)
+
